@@ -8,3 +8,16 @@
     font-family: Smooch Sans;
 }
 
+
+.building{
+    margin: auto;
+    height: 100vh;
+    width: 800px;
+    background-color: black;;
+}
+
+.floors{
+    color: white;
+    border: 1px solid red;
+    height: 25%;
+}
