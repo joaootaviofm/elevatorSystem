@@ -1,61 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Smooch Sans;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    
-}
-
-.building{
-    background-color: antiquewhite;
-    height: 100vh;
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
-
-#elevator1{
-    border: 1px solid black;
-    width: 100px;
-}
-
-#elevator2{
-    border: 1px solid black;
-    width: 100px;
-
-}
-
-#elevator3{
-    border: 1px solid black;
-    width: 100px;
-
-}
-
-#entrance1{
-    height: 150px;
-    background-color: Gray;
-    transition: margin-bottom 3s ease;
-}
-
-#entrance2{
-    height: 150px;
-    background-color: Gray;
-}
-
-#entrance3{
-    height: 150px;
-    background-color: gray;
-}
-
-.buttons{
-    background-color: gray;
-    padding: 10px;
-    margin-left: 100px;
-}
