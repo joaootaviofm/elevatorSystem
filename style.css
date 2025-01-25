@@ -41,7 +41,7 @@ body{
 #entrance1{
     height: 150px;
     background-color: Gray;
-
+    transition: margin-bottom 3s ease;
 }
 
 #entrance2{
@@ -54,3 +54,8 @@ body{
     background-color: gray;
 }
 
+.buttons{
+    background-color: gray;
+    padding: 10px;
+    margin-left: 100px;
+}
