@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.building{
+    background-color: antiquewhite;
+    height: 700px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+#elevator1{
+    border: 1px solid black;
+    width: 100px;
+}
+
+#elevator2{
+    border: 1px solid black;
+    width: 100px;
+
+}
+
+#elevator3{
+    border: 1px solid black;
+    width: 100px;
+
+}
+
+#entrance1{
+    height: 150px;
+    background-color: Gray;
+
+}
+
+#entrance2{
+    height: 150px;
+    background-color: Gray;
+}
+
+#entrance3{
+    height: 150px;
+    background-color: gray;
+}
+
+/*
+margin-top 550 = terreo
+margin-top 
+
+\
