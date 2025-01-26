@@ -1,19 +1,38 @@
 const doorCallButton = document.getElementById('doorCallButton')
 const doorDiv = document.getElementById('door')
+const controlPanel = document.getElementById('controlPanel')
+const buttonFirstFloor = document.getElementById('toFirstButton')
+const buttonSecondFloor = document.getElementById('toSecondButton')
+const buttonThirdFloor = document.getElementById('toThirdButton')
+const buttonFourthFloor = document.getElementById('toFourthButton')
 
+controlPanel.style.display = 'none';
 
 doorCallButton.addEventListener('click', () => {
-    doorDiv.innerHTML = ""
+    if(controlPanel.style.display == "none"){
+        controlPanel.style.display = "flex"
+    }
+    else{
+        controlPanel.style.display = "none";
+    }
+    doorCallButton.style.display ="none";
+})
+
+buttonFirstFloor.addEventListener('click', () => {
+    doorDiv.style.marginBottom = "0%";
+})
+
+buttonSecondFloor.addEventListener('click', () => {
+    doorDiv.style.marginBottom = "25%"
+})
+
+buttonThirdFloor.addEventListener('click', () => {
+    doorDiv.style.marginBottom = "50%";
+})
+
+buttonFourthFloor.addEventListener('click', () => {
+    doorDiv.style.marginBottom = "75%";
 })
 
 
 
-
-// 00 = terreo
-// 150 px = first floor
-// 300 px = second floor
-// 450px = third floor
-// 600px = 4th floor 
-// 750px = cobertura
-
-// elevator transition timing
