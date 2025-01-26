@@ -21,3 +21,10 @@
     border: 1px solid red;
     height: 25%;
 }
+
+#door{
+    background-color: #272727;
+    width: 150px;
+    margin: auto;
+    height: 100%
+}
