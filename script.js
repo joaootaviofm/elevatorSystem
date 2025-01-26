@@ -1,7 +1,10 @@
-var firstDoor = document.getElementById('entrance1')
-var secondDoor = document.getElementById('entrance2')
-var thirdDoor = document.getElementById('entrance3')
+const doorCallButton = document.getElementById('doorCallButton')
+const doorDiv = document.getElementById('door')
 
+
+doorCallButton.addEventListener('click', () => {
+    doorDiv.innerHTML = ""
+})
 
 
 
