@@ -6,6 +6,8 @@ const buttonSecondFloor = document.getElementById('toSecondButton')
 const buttonThirdFloor = document.getElementById('toThirdButton')
 const buttonFourthFloor = document.getElementById('toFourthButton')
 
+const dingElevator = new Audio('sounds/elevatorDing.mp3')
+
 controlPanel.style.display = 'none';
 
 doorCallButton.addEventListener('click', () => {
@@ -25,6 +27,7 @@ buttonFirstFloor.addEventListener('click', () => {
     doorDiv.innerHTML = "A caminho do primeiro andar"
     setTimeout(() => {
         doorDiv.innerHTML = "Primeiro andar"
+        dingElevator.play()
     },3000)
 })
 
@@ -34,6 +37,7 @@ buttonSecondFloor.addEventListener('click', () => {
     doorDiv.innerHTML = "A caminho do segundo andar..."
     setTimeout(() => {
         doorDiv.innerHTML = "Segundo andar"
+        dingElevator.play()
     },3000)
 
 })
@@ -44,6 +48,7 @@ buttonThirdFloor.addEventListener('click', () => {
     doorDiv.innerHTML = "A caminho do terceiro andar..."  
     setTimeout(() => {
         doorDiv.innerHTML = "Terceiro andar"
+        dingElevator.play()
     },3000)
 
 })
@@ -54,6 +59,7 @@ buttonFourthFloor.addEventListener('click', () => {
     doorDiv.innerHTML = "A caminho do quarto andar"
     setTimeout(() => {
         doorDiv.innerHTML = "Quarto andar"
+        dingElevator.play()
     },3000)
 })
 
