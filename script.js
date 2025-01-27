@@ -7,6 +7,7 @@ const buttonThirdFloor = document.getElementById('toThirdButton')
 const buttonFourthFloor = document.getElementById('toFourthButton')
 
 const dingElevator = new Audio('sounds/elevatorDing.mp3')
+const runElevator = new Audio('sounds/elevator.mp3')
 
 controlPanel.style.display = 'none';
 
@@ -17,7 +18,8 @@ doorCallButton.addEventListener('click', () => {
     else{
         controlPanel.style.display = "none";
     }
-    let currentFloor = 0
+
+    let currentFloor = 0;
     doorCallButton.style.display ="none";
 })
 
@@ -25,20 +27,28 @@ buttonFirstFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "0%";
     currentFloor = 1;
     doorDiv.innerHTML = "A caminho do primeiro andar"
+    runElevator.play()
+    setTimeout(() => {
+        runElevator.pause();
+    },5000)
     setTimeout(() => {
         doorDiv.innerHTML = "Primeiro andar"
         dingElevator.play()
-    },3000)
+    },5000)
 })
 
 buttonSecondFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "25%"
-    currentFloor = 2;
     doorDiv.innerHTML = "A caminho do segundo andar..."
+    currentFloor = 2;
+    runElevator.play()
+    setTimeout(() => {
+        runElevator.pause();
+    },5000)
     setTimeout(() => {
         doorDiv.innerHTML = "Segundo andar"
         dingElevator.play()
-    },3000)
+    },5000)
 
 })
 
@@ -46,10 +56,14 @@ buttonThirdFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "50%";
     currentFloor = 3;
     doorDiv.innerHTML = "A caminho do terceiro andar..."  
+    runElevator.play()
+    setTimeout(() => {
+        runElevator.pause();
+    },5000)
     setTimeout(() => {
         doorDiv.innerHTML = "Terceiro andar"
         dingElevator.play()
-    },3000)
+    },5000)
 
 })
 
@@ -57,10 +71,14 @@ buttonFourthFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "75%";
     currentFloor = 4;
     doorDiv.innerHTML = "A caminho do quarto andar"
+    runElevator.play()
+    setTimeout(() => {
+        runElevator.pause();
+    },5000)
     setTimeout(() => {
         doorDiv.innerHTML = "Quarto andar"
         dingElevator.play()
-    },3000)
+    },5000)
 })
 
 

@@ -31,7 +31,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: margin 3s ease;
+    transition: margin 5s ease;
     flex-direction: column;
 }
 
