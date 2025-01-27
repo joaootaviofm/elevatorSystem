@@ -22,6 +22,10 @@ doorCallButton.addEventListener('click', () => {
 buttonFirstFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "0%";
     currentFloor = 1;
+    doorDiv.innerHTML = "A caminho do primeiro andar"
+    setTimeout(() => {
+        doorDiv.innerHTML = "Primeiro andar"
+    },3000)
 })
 
 buttonSecondFloor.addEventListener('click', () => {
