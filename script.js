@@ -15,23 +15,42 @@ doorCallButton.addEventListener('click', () => {
     else{
         controlPanel.style.display = "none";
     }
+    let currentFloor = 0
     doorCallButton.style.display ="none";
 })
 
 buttonFirstFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "0%";
+    currentFloor = 1;
 })
 
 buttonSecondFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "25%"
+    currentFloor = 2;
+    doorDiv.innerHTML = "A caminho do segundo andar..."
+    setTimeout(() => {
+        doorDiv.innerHTML = "Segundo andar"
+    },3000)
+
 })
 
 buttonThirdFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "50%";
+    currentFloor = 3;
+    doorDiv.innerHTML = "A caminho do terceiro andar..."  
+    setTimeout(() => {
+        doorDiv.innerHTML = "Terceiro andar"
+    },3000)
+
 })
 
 buttonFourthFloor.addEventListener('click', () => {
     doorDiv.style.marginBottom = "75%";
+    currentFloor = 4;
+    doorDiv.innerHTML = "A caminho do quarto andar"
+    setTimeout(() => {
+        doorDiv.innerHTML = "Quarto andar"
+    },3000)
 })
 
 
