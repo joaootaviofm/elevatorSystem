@@ -14,7 +14,7 @@ doorCallButton.addEventListener('click', () => {
     else{
         controlPanel.style.display = "none";
     }
-
+    soundDingElevator.play();
     doorCallButton.style.display ="none";
 })
 
@@ -47,7 +47,6 @@ function playQueue(){
         movingToFloor(nextFloor)
     }
 }
-
 
 function elevatorSound(){
     soundRunningElevator.currentTime = 0
