@@ -22,8 +22,23 @@ const queue = [];
 let isRunning = false;
 
 function runElevator(floorNumber){
-   
+    queue.push(floorNumber)
+    runQueue();
 }
+
+function runQueue(){
+    if(queue.length == 0 || isRunning){
+        return;
+    }
+    else{
+        isRunning = true;
+        const prox = queue.shift();
+        movingFloor(prox)
+        
+    }
+}
+
+
 
 function elevatorSound(){
     soundRunningElevator.currentTime = 0
@@ -34,7 +49,6 @@ function elevatorSound(){
 }
 
 function elevatorDing(){
-    soundDingElevator.currentTime = 0
     setTimeout(()=>{
         soundDingElevator.play();
     },5050)
@@ -43,14 +57,23 @@ function elevatorDing(){
 function movingFloor(floorNumber){
     if(floorNumber == 1){
         doorDiv.style.marginBottom = "0%"
+        elevatorSound()
+        elevatorDing()
     }
     else if(floorNumber == 2){
         doorDiv.style.marginBottom = "25%"
+        elevatorSound()
+        elevatorDing()
     }
     else if(floorNumber == 3){
         doorDiv.style.marginBottom = "50%"
+        elevatorSound()
+        elevatorDing()
     }
     else{
+        doorDiv.style.marginBottom = "75%";
+        elevatorSound()
+        elevatorDing()
     }
 }
 
