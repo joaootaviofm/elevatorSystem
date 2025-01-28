@@ -75,5 +75,8 @@ function movingToFloor(floorNumber){
         elevatorSound()
         elevatorDing()
     }
+    setTimeout(() => {
+        playQueue()
+    },5500)
 }
 
