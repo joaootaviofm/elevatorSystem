@@ -54,29 +54,46 @@ function elevatorDing(){
     },5050)
 }
 
+function doorMessage(floorNumber){
+    doorDiv.innerHTML = `A caminho do ${floorNumber} andar`
+}
+
+function arriveMessage(floorNumber){
+    setTimeout(()=>{
+        doorDiv.innerHTML = `Voce chegou no ${floorNumber} andar`
+    },5000)
+}
+
 function movingToFloor(floorNumber){
     if(floorNumber == 1){
         doorDiv.style.marginBottom = "0%"
         elevatorSound()
         elevatorDing()
+        doorMessage(floorNumber)
+        arriveMessage(floorNumber)
     }
     else if(floorNumber == 2){
         doorDiv.style.marginBottom = "25%"
         elevatorSound()
         elevatorDing()
+        doorMessage(floorNumber)
+        arriveMessage(floorNumber)
     }
     else if(floorNumber == 3){
         doorDiv.style.marginBottom = "50%"
         elevatorSound()
         elevatorDing()
+        doorMessage(floorNumber)
+        arriveMessage(floorNumber)
     }
     else{
         doorDiv.style.marginBottom = "75%";
         elevatorSound()
         elevatorDing()
+        doorMessage(floorNumber)
+        arriveMessage(floorNumber)
     }
     setTimeout(() => {
         playQueue()
     },5500)
 }
-
