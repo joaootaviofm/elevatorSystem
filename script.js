@@ -31,6 +31,15 @@ function runElevator(floorNumber){
 function playQueue(){
     if(queue.length == 0){
         isRunning = false;
+        setTimeout(() => {
+            doorDiv.innerHTML = "Voltando ao 1 andar"
+            doorDiv.style.marginBottom = "0%"
+            elevatorSound()
+            elevatorDing()
+            setTimeout(() => {
+                doorDiv.innerHTML = "Esperando chamado..."
+            },2000)
+        },6000)
     }
     else{
         isRunning = true;
