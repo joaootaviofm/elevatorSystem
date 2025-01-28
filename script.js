@@ -76,32 +76,21 @@ function arriveMessage(floorNumber){
 function movingToFloor(floorNumber){
     if(floorNumber == 1){
         doorDiv.style.marginBottom = "0%"
-        elevatorSound()
-        elevatorDing()
-        doorMessage(floorNumber)
-        arriveMessage(floorNumber)
     }
     else if(floorNumber == 2){
         doorDiv.style.marginBottom = "25%"
-        elevatorSound()
-        elevatorDing()
-        doorMessage(floorNumber)
-        arriveMessage(floorNumber)
     }
     else if(floorNumber == 3){
         doorDiv.style.marginBottom = "50%"
-        elevatorSound()
-        elevatorDing()
-        doorMessage(floorNumber)
-        arriveMessage(floorNumber)
+  
     }
     else{
         doorDiv.style.marginBottom = "75%";
-        elevatorSound()
-        elevatorDing()
-        doorMessage(floorNumber)
-        arriveMessage(floorNumber)
     }
+    elevatorSound()
+    elevatorDing()
+    doorMessage(floorNumber)
+    arriveMessage(floorNumber)
     setTimeout(() => {
         playQueue()
     },5500)
