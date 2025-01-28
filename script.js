@@ -23,22 +23,8 @@ let isRunning = false;
 
 function runElevator(floorNumber){
     queue.push(floorNumber)
-    runQueue();
+    console.log(queue)
 }
-
-function runQueue(){
-    if(queue.length == 0 || isRunning){
-        return;
-    }
-    else{
-        isRunning = true;
-        const prox = queue.shift();
-        movingFloor(prox)
-        
-    }
-}
-
-
 
 function elevatorSound(){
     soundRunningElevator.currentTime = 0
@@ -54,7 +40,8 @@ function elevatorDing(){
     },5050)
 }
 
-function movingFloor(floorNumber){
+function movingToFloor(floorNumber){
+    isRunning = true
     if(floorNumber == 1){
         doorDiv.style.marginBottom = "0%"
         elevatorSound()
