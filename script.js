@@ -19,12 +19,26 @@ doorCallButton.addEventListener('click', () => {
 })
 
 const queue = [];
-let isRunning = false;
+var isRunning = false
 
 function runElevator(floorNumber){
     queue.push(floorNumber)
-    console.log(queue)
+    if(isRunning == false){
+        playQueue()
+    }
 }
+
+function playQueue(){
+    if(queue.length == 0){
+        isRunning = false;
+    }
+    else{
+        isRunning = true;
+        const nextFloor = queue.shift()
+        movingToFloor(nextFloor)
+    }
+}
+
 
 function elevatorSound(){
     soundRunningElevator.currentTime = 0
@@ -41,7 +55,6 @@ function elevatorDing(){
 }
 
 function movingToFloor(floorNumber){
-    isRunning = true
     if(floorNumber == 1){
         doorDiv.style.marginBottom = "0%"
         elevatorSound()
