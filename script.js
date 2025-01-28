@@ -1,7 +1,7 @@
 const doorCallButton = document.getElementById('doorCallButton')
 const doorDiv = document.getElementById('door')
-const soundDingElevator = new Audio('sounds/elevatorDing.mp3')
-const soundRunningElevator = new Audio('sounds/elevator.mp3')
+const soundDingElevator = new Audio('elevatorDing.mp3')
+const soundRunningElevator = new Audio('elevator.mp3')
 const controlPanel = document.getElementById('controlPanel')
 
 
